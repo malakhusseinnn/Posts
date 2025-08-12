@@ -1,0 +1,151 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    list-style-type: none;
+}
+
+body{
+    max-width: 100svw;
+    min-height: 100svh;
+    font-family: "Outfit", sans-serif;
+    background-image: linear-gradient(135deg, darkslategray 40%,rgba(239, 232, 232, 0.608));
+    background-attachment: fixed;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 30px;
+
+
+}
+
+.hash-tags{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px;
+    align-content: flex-start;
+}
+
+.tag{
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(46, 131, 131);
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 3px black;
+}
+
+.tag:hover{
+    transform: scale(0.9);
+    background-color: rgb(102, 237, 237) ;
+}
+
+input{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    width: 50%;
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black; 
+    background-color: aliceblue;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+
+.post{
+    background-color: aliceblue;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(25, 25, 25);
+}
+.post ul{
+    display: flex;
+    gap: 10px;
+    padding: 20px 0px;
+}
+
+.post ul li{
+    background-color: rgba(91, 148, 150, 0.751);
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.title{
+    font-size: 20px;
+    color: darkslategray;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.body{
+    font-size: 15px;
+    margin: 5px 10px;
+    color: rgba(0, 0, 0, 0.775);
+}
+
+.views{
+    color: rgb(22, 22, 194);
+}
+
+.likes{
+    color: rgb(124, 21, 21);
+}
+
+.reactions{
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid gray;
+    padding: 10px;
+}
+
+
+/* -------------Media Query-------------------- */
+
+@media (max-width:432px) {
+    .container{
+        gap: 30px;
+    }
+    .post{
+        width: 220px;
+    }
+    .reactions{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .body{
+        font-size: 13px;
+    }
+    .post ul li{
+        font-size: 12px;
+    }
+    .tag{
+        font-size: 12px;
+    }
+}
