@@ -123,6 +123,20 @@ input{
     padding: 10px;
 }
 
+.not-found{
+    font-size: 30px;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    
+}
+
+::selection{
+    color: aliceblue;
+    background-color: darkslategray;
+}
 
 /* -------------Media Query-------------------- */
 

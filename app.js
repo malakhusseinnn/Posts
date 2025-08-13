@@ -7,7 +7,7 @@ async function getPosts(link){
     let response = await fetch(link);
     let data = await response.json();
     let allposts = data.posts;
-    if(allposts.length == 0)
+    if(!allposts.length)
     {
         posts.innerHTML = `
         <p class = "not-found">No Posts Founded <i class="fa-solid fa-heart-crack"></i> </p>
@@ -31,14 +31,12 @@ async function getPosts(link){
        
        </div>
         `
-
     })
 }
 
 async function getTags(){
     let response = await fetch('https://dummyjson.com/posts/tags');
     let tags = await response.json();
-    console.log(tags);
     tags.map((e)=>{
         hashTags.innerHTML += `
             <p class = "tag" onclick = "getPosts('${e.url}')"># ${e.slug}</p>
